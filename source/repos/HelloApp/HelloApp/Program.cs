@@ -1,8 +1,25 @@
 ﻿Console.WriteLine("Введите значение x:");
-int x = Convert.ToInt32(Console.ReadLine());
+decimal x = Convert.ToDecimal(Console.ReadLine());
 Console.WriteLine("Введите значение y:");
-int y = Convert.ToInt32(Console.ReadLine());
-int result = x / y;
-int rest = x % y;
-Console.WriteLine(result);
-Console.WriteLine(rest);
+decimal y = Convert.ToDecimal(Console.ReadLine());
+if (y == 0)
+{ 
+    Console.WriteLine("Cannot divide by 0"); 
+}
+else
+{
+    decimal answer = x / y;
+    Console.WriteLine(answer);
+}
+
+// Также можно решить эту задачу следующим образом
+
+try
+{
+    decimal answer = x / y;
+    Console.WriteLine(answer);
+}
+catch(DivideByZeroException)
+{
+    Console.WriteLine("Cannot divide by 0");
+}
