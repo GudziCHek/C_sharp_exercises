@@ -1,25 +1,10 @@
 ﻿Console.WriteLine("Введите значение x:");
-decimal x = Convert.ToDecimal(Console.ReadLine());
-Console.WriteLine("Введите значение y:");
-decimal y = Convert.ToDecimal(Console.ReadLine());
-if (y == 0)
-{ 
-    Console.WriteLine("Cannot divide by 0"); 
-}
-else
-{
-    decimal answer = x / y;
-    Console.WriteLine(answer);
-}
-
-// Также можно решить эту задачу следующим образом
-
-try
-{
-    decimal answer = x / y;
-    Console.WriteLine(answer);
-}
-catch(DivideByZeroException)
-{
-    Console.WriteLine("Cannot divide by 0");
-}
+int x = Convert.ToInt32(Console.ReadLine());
+var exercise1 = -6 + x * 5;
+var exercise2 = (13-2) * x;
+var exercise3 = (x + -2) * (20 / 10);
+var exercise4 = (12 + x) / (5 - 4);
+Console.WriteLine(exercise1);
+Console.WriteLine(exercise2);
+Console.WriteLine(exercise3);
+Console.WriteLine(exercise4);
