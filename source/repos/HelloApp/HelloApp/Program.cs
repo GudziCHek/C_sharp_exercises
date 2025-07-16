@@ -1,20 +1,8 @@
-﻿Console.WriteLine("Введите диапозон чисел:");
-int x1 = Convert.ToInt32(Console.ReadLine());
-int x2 = Convert.ToInt32(Console.ReadLine());
-int x;
-if (x1 < x2)
-{
-    for (x = x1; x <= x2; x++)
-    {
-        int y = x * x - 2 * x + 1;
-        Console.Write("{0} ", y);
-    }
-}
-else
-{
-    for (x = x2; x <= x1; x++)
-    {
-        int y = x * x - 2 * x + 1;
-        Console.Write("{0} ", y);
-    }
-}
+﻿Console.WriteLine("Введите радиус окружности:");
+decimal radius = Convert.ToDecimal(Console.ReadLine());
+
+decimal pi = (Decimal)Math.PI;
+decimal surface = 4 * pi * radius * radius;
+decimal volume = 4 / 3 * pi * radius * radius * radius;
+Console.WriteLine("Площадь окружности = {0:F2}", surface);
+Console.WriteLine("Объём окружности = {0}", volume);
