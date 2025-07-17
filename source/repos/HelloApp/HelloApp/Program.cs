@@ -1,5 +1,7 @@
-﻿Console.WriteLine("Введите три буквы:");
-char a = Convert.ToChar(Console.ReadLine());
-char b = Convert.ToChar(Console.ReadLine());
-char c = Convert.ToChar(Console.ReadLine());
-Console.WriteLine("{0} {1} {2}", c, b, a);
+﻿Console.WriteLine("Введите градусы в Цельсиях:");
+decimal Celsius = Convert.ToDecimal(Console.ReadLine());
+
+decimal Kelvin = Celsius + 273;
+decimal Fahrenheit = (Celsius * (18 / 10)) + 32;
+Console.WriteLine("Kelvin = {0}", Kelvin);
+Console.WriteLine("Fahrenheit = {0}", Fahrenheit);
