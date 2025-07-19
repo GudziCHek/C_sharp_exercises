@@ -1,8 +1,10 @@
-﻿Console.WriteLine("Введите первое число:");
-int num1 = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите второе число:");
-int num2 = int.Parse(Console.ReadLine());
+﻿int[] numbers = new int[5];
 
-Random random = new Random();
-int rndNum = random.Next(num1, num2 + 1);
-Console.WriteLine(rndNum);
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine($"Введите число {i + 1}:");
+    numbers[i] = int.Parse(Console.ReadLine());
+}
+
+Array.Reverse(numbers);
+Console.WriteLine(string.Join(" ", numbers));
